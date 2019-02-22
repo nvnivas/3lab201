@@ -75,3 +75,53 @@ if (isAvaliableForHire.toLowerCase() === 'yes' || isAvaliableForHire.toLowerCase
   console.log('Invalid input:', isAvaliableForHire);
 }
 
+var noOfTries = 4;
+var myActualFavNumber = 6;
+for (var i=0; i < noOfTries; i++) {
+  console.log('Fav Number Attempt', i+1);
+  var myFavNumber = parseInt(prompt('What is my favourite number? Please enter a number'));
+  console.log('Fav Number Ans', myFavNumber);
+  if(myFavNumber === myActualFavNumber){
+    alert('You got it');
+    console.log('You got my fav number');
+    noOfCorrectAns += 1;
+    break;
+  } else {
+    if(isNaN(myFavNumber)){
+      alert('You have not entered a number.')
+    } else if(myFavNumber < myActualFavNumber){
+      alert('Too Low');
+    } else if(myFavNumber > myActualFavNumber){
+      alert('Too High');
+    }  
+    if(i === noOfTries - 1)
+      alert('Wrong! May be next time');
+    else
+      alert('You can try again');
+  }
+}
+
+var noOfTriesForFavPlace = 6;
+var myFavPlaces = ['india','seattle','hyderabad','bellevue', 'california'];
+for (var i=0; i < noOfTriesForFavPlace; i++) {
+  console.log('Fav Place Attempt', i+1);
+  var myFavPlace = prompt('What is my favourite Place?');
+  console.log('Fav Place Ans', myFavPlace);
+
+  for(var j = 0; j < myFavPlaces.length; j++) {
+    if(myFavPlace.toLowerCase() === myFavPlaces[j].toLowerCase()) {
+      alert('You got it');
+      console.log('You got my fav Place');
+      noOfCorrectAns += 1;
+      break;
+    } 
+  }
+
+  if(i === noOfTriesForFavPlace - 1)
+    alert('Wrong! May be next time');
+  else
+    alert('You can try again');  
+}
+
+console.log('noOfCorrectAns::', noOfCorrectAns);
+alert('You got '+ noOfCorrectAns + ' out of 7 Questions. '+userName+'! Better luck next time!');
