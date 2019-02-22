@@ -32,13 +32,28 @@ h1 {
 
 h2 {
   font-size: 1.5em;
+  font-style: italic;
+  font-weight: 200;
 }
-
+p {
+  margin: 5px;
+}
 body {
   background-color: aqua;
 }
 
 div {
   width: 100%;
+  margin-top: 10px;
+}
+
+.personal-info {
+  margin: 20px;
+
+}
+
+ol {
+  list-style-type: decimal;
+  margin-left: 20px;
   margin-top: 10px;
 }
