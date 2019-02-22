@@ -103,6 +103,7 @@ for (var i=0; i < noOfTries; i++) {
 
 var noOfTriesForFavPlace = 6;
 var myFavPlaces = ['india','seattle','hyderabad','bellevue', 'california'];
+var foundFavPlace = false;
 for (var i=0; i < noOfTriesForFavPlace; i++) {
   console.log('Fav Place Attempt', i+1);
   var myFavPlace = prompt('What is my favourite Place?');
@@ -113,9 +114,12 @@ for (var i=0; i < noOfTriesForFavPlace; i++) {
       alert('You got it');
       console.log('You got my fav Place');
       noOfCorrectAns += 1;
+      foundFavPlace = true;
       break;
     } 
   }
+  if(foundFavPlace)
+    break;
 
   if(i === noOfTriesForFavPlace - 1)
     alert('Wrong! May be next time');
